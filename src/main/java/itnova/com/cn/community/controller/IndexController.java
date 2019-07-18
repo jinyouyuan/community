@@ -2,6 +2,7 @@ package itnova.com.cn.community.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -10,12 +11,17 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @date 2019/7/10 - 9:33
  */
 @Controller
-public class HelloController {
+public class IndexController {
 
-    @RequestMapping("/hello")
+    /*@RequestMapping("/")
     public String hello(@RequestParam("name") String name, Model model) {
         model.addAttribute("name", name);
         return "hello";
+    }*/
+
+    @GetMapping("/")
+    public String index(){
+        return  "index";
     }
 }
 
